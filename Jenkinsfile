@@ -27,7 +27,6 @@ pipeline {
         branch 'develop'
       }
     }
-      
       steps {
         withCredentials([usernamePassword(credentialsId: 'docker-creds', passwordVariable: 'DOCKER_PASSWD', usernameVariable: 'DOCKER_USERNAME')]) {
           sh '''
